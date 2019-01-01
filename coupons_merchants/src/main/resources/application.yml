@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: coupons_merchants
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/coupons?autoReconnect=true&serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: root
+    password:
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    consumer:
+      group-id: passbook
+    listener:
+      concurrency: 4
+
+server:
+  port: 9527
+
+logging:
+  level:
+    com.gsyun: debug
+  file: merchants.log
